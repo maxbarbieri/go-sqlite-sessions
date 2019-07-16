@@ -55,7 +55,7 @@ func createSqliteStore() {
 		MaxAge:   options.MaxAge,
 		Domain:   options.Domain,
 		Secure:   options.Secure,
-		HttpOnly: options.Secure,
+		HttpOnly: options.HttpOnly,
 		SameSite: options.SameSite,
 	}
 
