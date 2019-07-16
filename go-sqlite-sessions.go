@@ -82,6 +82,10 @@ func DeleteSession(resWriter http.ResponseWriter, request *http.Request, session
 	sessionsStore.Delete(request, resWriter, session)
 }
 
+func DeleteFromDatabaseSessionWithID(sessionID string) error {
+	return sessionsStore.DeleteFromDatabaseSessionWithID(sessionID)
+}
+
 func SetExpiredSessionPreDeleteCallback(callback func(*sessions.Session)) {
 	sessionsStore.SetExpiredSessionPreDeleteCallback(callback)
 }
